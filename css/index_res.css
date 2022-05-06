@@ -1,0 +1,86 @@
+/* index_res.css */
+@charset "utf-8";
+
+@media(max-width:1200px){
+    #mainBanner .dark .wrap{ width: 100%;}
+    #mainCont1 .intro{width: 100%;}
+    #mainCont1 .story{width: 100%;}
+    #mainCont2 .journal{width: 100%;}
+    #mainCont2 .stores{width: 100%;}
+}
+
+
+@media(max-width:991px){
+    #mainCont2 .journal .wrap .journalBox{width: calc(50% - 20px);}
+}
+
+@media(max-width:767px){
+    #mainBanner{ height: 66.66vh;}
+    #mainBanner .dark .wrap h1{
+        width: 100%;
+        bottom: 0;
+        font-size: 40px;
+        padding: 20px 0;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: 0;
+    }
+    #mainCont1{
+        background-image: none;
+    }
+    #mainCont1 .intro .wrap{
+        flex-direction: column;
+    }
+    #mainCont1 .intro .wrap .introBox{
+        width: 100%;
+        /* margin: 40px 16px 0; */
+    }
+    #mainCont1 .story .wrap .cont{
+        flex-direction: column;
+    }
+    #mainCont1 .story .wrap .cont:last-child{
+        flex-direction: column-reverse;
+    }
+    #mainCont1 .story .wrap .cont .textBox{
+        width: calc(100% - 32px);
+        margin: 0 16px 20px;
+    }
+    #mainCont1 .story .wrap .cont .imgBox{
+        width: calc(100% - 32px);
+        margin: 0 16px 20px;
+    }
+    #mainCont1 .story .wrap .cont .textBox h3{
+        padding-bottom: 10px;
+    }
+    #mainCont2{ background-image: none;}
+    #mainCont2 .journal .wrap{
+        flex-direction: column;
+    }
+    #mainCont2 .journal .wrap .journalBox{
+        width: calc(100% - 32px);
+        padding: 20px 0;
+    }
+    #mainCont2 .journal .wrap .journalBox .textBox{
+        text-align: center;
+    }
+    #mainCont2 .journal .wrap .journalBox{
+        margin: 0 16px 20px;
+    }
+    #mainCont2 .journal .wrap .journalBox .textBox h3{
+        padding: 20px 0;
+    }
+    #mainCont2 .stores .wrap{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 360px);
+        grid-gap: 16px;
+    }
+    #mainCont2 .stores .wrap .storeBox:nth-child(1){ grid-column: 1 / 2; }
+    #mainCont2 .stores .wrap .storeBox:nth-child(2){ grid-column: 1 / 2; }
+    #mainCont2 .stores .wrap .storeBox:nth-child(3){ grid-column: 1 / 2; }
+
+    #mapPlace{
+        flex-direction: column;
+    }
+    #mapPlace #map{ width: 100%;}
+    #mapPlace .imgBox{ width: 100%;}
+}

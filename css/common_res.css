@@ -1,0 +1,111 @@
+/* common_res.css */
+@charset "utf-8";
+
+/* header part(반응형) */
+@media (max-width:1200px){
+    header .wrap{ width: 100%;}
+}
+@media (max-width:991px){
+    header .wrap nav ul li{ margin: 0 20px;}
+}
+@media (max-width:767px){
+    header label[for="open_menu"],[for="close_menu"]{
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 10px;
+        height: 100%;
+        /* background: #ffa; */
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 5;
+    }
+    header label[for="open_menu"] img,
+    header label[for="close_menu"] img{
+        height: 50px;
+    }
+    header label[for="open_menu"]{display: flex;}
+    header label[for="close_menu"]{display: none;}
+    header .wrap .logo{
+        position: absolute;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    header .wrap nav{
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+        max-height: 0;
+        overflow: hidden;
+    }
+    header .wrap nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .wrap nav ul li{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    header .wrap nav ul li a{
+        line-height: 40px;
+    }
+    header .wrap nav ul li:hover a{
+        display: block;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+    header .wrap nav ul li:hover a::before{
+        transform: scaleX(0);
+    }
+
+    header .wrap .snsMenu{ 
+        display: none;
+    }
+
+    #open_menu:checked ~ header .wrap nav{
+        max-height: 320px;
+        transition: max-height 0.5s;
+    }
+
+    #open_menu:checked ~ header label[for="open_menu"]{display: none;}
+    #open_menu:checked ~ header label[for="close_menu"]{display: flex;}
+
+    #close_menu:checked ~ header label[for="open_menu"]{display: flex;}
+    #close_menu:checked ~ header label[for="close_menu"]{display: none;}
+    
+}
+
+
+/* footer part(반응형) */
+@media (max-width:1200px) {
+    footer .wrap{width: 100%;}
+}
+
+@media(max-width:991px){
+    footer{
+        padding: 30px 0;
+    }
+    footer .wrap{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .wrap .logo{
+        padding-left: 0;
+        width: 80px;
+    }
+    footer .wrap nav{
+        padding: 20px 0;
+    }
+
+    footer .wrap nav ul{flex-wrap: wrap;}
+    footer .wrap nav ul li{
+        width: 50%;
+        text-align: center;
+        margin: 0;
+    }
+}
